@@ -11,7 +11,7 @@
 
 ![ ](http://www.hoseinh.com/wp-content/uploads/2021/07/1.gif)
   ## Introduction
-  **Full Tutorial In My Blog:** 
+   **Full Tutorial In My Blog:** [click here](https://www.hoseinh.com/how-to-create-a-count-down-timer-in-react-easily/)
   reactjs-countdown-hook is a simple count down timer hook for react that makes creating timers very easy this hook is very flexible and it accepts seconds and a function to run after the count down is over and it features formatted seconds, minutes, hours and days and it has functions for pausing, resuming and resetting.
 
 ## Install
@@ -27,7 +27,7 @@ npm install --save reactjs-countdown-hook
   
 
 ## Usage
-the useTimer hook of "reactjs-countdown-hook" accepts initial remaining time as seconds and an optional callback function to run when timer is over and the hook return the following variables:
+the useTimer hook of "reactjs-countdown-hook" accepts initial remaining time as seconds and an optional callback function to run when the timer is over and the hook returns the following variables:
 
  - isActive: the state of the timer that shows if the count down is paused or it's active - boolean
  - counter: remaining time in seconds - number
