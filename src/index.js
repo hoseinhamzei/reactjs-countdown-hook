@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 
 export const useTimer = (count, onFinish) => {
   const [isActive, setIsActive] = useState(true);
-  const [counter, setCounter] = useState(count);
-  const [seconds, setSeconds] = useState("");
-  const [minutes, setMinutes] = useState("");
-  const [hours, setHours] = useState("");
-  const [days, setDays] = useState("");
+  const [counter, setCounter] = useState({
+    count: count,
+    seconds: "",
+    minutes: "",
+    hours: "",
+    days: "",
+  });
 
   useEffect(() => {
     let intervalId;
@@ -14,7 +16,7 @@ export const useTimer = (count, onFinish) => {
     if (isActive) {
       intervalId = setInterval(() => {
         if (counter >= 1) {
-          setCounter((counter) => counter - 1);
+          setCounter((counter) => ({ ...counter, count: counter.count - 1 }));
         } else {
           setIsActive(false);
           if (onFinish) {
@@ -40,10 +42,13 @@ export const useTimer = (count, onFinish) => {
         const computedDay =
           String(daysCounter).length === 1 ? `0${daysCounter}` : daysCounter;
 
-        setSeconds(computedSecond);
-        setMinutes(computedMinute);
-        setHours(computedHour);
-        setDays(computedDay);
+        setCounter((counter) => ({
+          ...counter,
+          seconds: computedSecond,
+          minutes: computedMinute,
+          hours: computedHour,
+          days: computedDay,
+        }));
       }, 1000);
     }
 
@@ -59,21 +64,23 @@ export const useTimer = (count, onFinish) => {
   }
 
   function reset() {
-    setCounter(count);
-    setSeconds("00");
-    setMinutes("00");
-    setHours("00");
-    setDays("00");
+    setCounter({
+      count,
+      seconds: "00",
+      minutes: "00",
+      hours: "00",
+      days: "00",
+    });
     setIsActive(true);
   }
 
   return {
     isActive,
-    counter,
-    seconds,
-    minutes,
-    hours,
-    days,
+    counter: counter.count,
+    seconds: counter.seconds,
+    minutes: counter.minutes,
+    hours: counter.hours,
+    days: counter.days,
     pause,
     resume,
     reset,

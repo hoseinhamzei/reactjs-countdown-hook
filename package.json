@@ -1,6 +1,6 @@
 {
   "name": "reactjs-countdown-hook",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a simple count down timer hook for react with formatting",
   "author": "hoseinhamzei",
   "license": "MIT",

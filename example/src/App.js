@@ -19,6 +19,7 @@ const App = () => {
   }
   return (
     <div>
+      {counter}
       <div>{`${days} : ${hours} : ${minutes} : ${seconds}`}</div>
       <button onClick={() => (isActive ? pause() : resume())}>
         {isActive ? "Pause" : "Resume"}
