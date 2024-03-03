@@ -8,6 +8,7 @@
   
 
 [![NPM](https://img.shields.io/npm/v/reactjs-countdown-hook.svg)](https://www.npmjs.com/package/reactjs-countdown-hook) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![NPM Downloads](https://img.shields.io/npm/dt/reactjs-countdown-hook)
 
 ![ ](http://www.hoseinh.com/wp-content/uploads/2021/07/1.gif)
   ## Introduction
